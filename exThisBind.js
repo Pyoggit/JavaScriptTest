@@ -1,4 +1,4 @@
-/** This 바인드 테스트 */
+//** This 바인드 테스트 */
 function main(){
     console.log(this);
 }
@@ -11,3 +11,10 @@ const object = {
 };
 
 object.mainBind();
+
+//** 이벤트 처리 This */
+const button = document.getElementById('btn');
+
+button.addEventListener('click', function(event){
+    console.log(event.target === this);
+})
