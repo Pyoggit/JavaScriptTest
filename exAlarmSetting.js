@@ -82,3 +82,17 @@ function solution(Members, Logs) {
 
     return Members.map(m => alarmCount[m]);
 }
+
+const Members = ["A", "B", "C", "D"];
+const Logs = [
+  ["A", "ARTICLE", "art1"],
+  ["B", "COMMENT", "c1", "art1"],
+  ["C", "COMMENT", "c2", "art1"],
+  ["D", "COMMENT", "c3", "art1"],
+  ["A", "COMMENT", "c4", "art1"],
+  ["B", "SUB_COMMENT", "sc1", "c1"],
+  ["C", "SUB_COMMENT", "sc2", "c1"],
+  ["D", "SUB_COMMENT", "sc3", "c1"]
+];
+
+console.log(solution(Members, Logs)); // 알람 받은 횟수 배열 출력
